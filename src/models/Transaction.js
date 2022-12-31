@@ -8,7 +8,7 @@ import mongoose from "mongoose"
 
 const schema = new mongoose.Schema({
     cartCode: {
-        type: String,
+        type: Number,
         required: true,
     },
     code: {
@@ -42,7 +42,7 @@ const schema = new mongoose.Schema({
         type: Number, //parcelas
     },
     total:{
-        type:number
+        type: Number
     },
     transactionId:{
         type: String,
