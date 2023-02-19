@@ -8,8 +8,8 @@ import mongoose from "mongoose"
 
 const schema = new mongoose.Schema({
     cartCode: {
-        type: Number,
-        required: true,
+        type: String,
+       // required: true,
     },
     code: {
         type: String,

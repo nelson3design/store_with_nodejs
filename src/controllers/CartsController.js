@@ -7,7 +7,7 @@ class CartsController{
 
         try {
 
-            const carts= await Cart.find()
+            const carts = await Cart.find()
 
             return res.status(200).json(carts)
 

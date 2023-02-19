@@ -89,16 +89,17 @@ class TransactionController {
 
               // verificar se existir o cart
 
-              const cart = Cart.findOne({code: cartCode})
+            const cart =  await Cart.findOne({ code: cartCode })
 
               if(!cart){
                   return res.status(404).json()
               }
+           
 
               // criar o transaction 
-            console.log(cartCode)
-
+      
               const service = new TransactionService()
+    
               const response = await service.process({
                   cartCode,
                   paymentType,
